@@ -1,4 +1,4 @@
-class animal:
+class Animal:
     def __innit__(self, name, species):
         self.name = name
         self.species = species
@@ -7,7 +7,7 @@ class animal:
     def feed(self, value):
         self.hapiness += value
 
-class enclosure:
+class Enclosure:
     def __innit__(self, species):
         self.species = species
         self.animals = []
@@ -22,7 +22,7 @@ class enclosure:
         else:
             raise ValueError("Especie do animal não compativel com o recinto")
         
-class zoo:
+class Zoo:
     def __innit__(self):
         self.enclosures = []
         self.money = 0
