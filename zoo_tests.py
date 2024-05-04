@@ -1,4 +1,5 @@
 import unittest
+from zoo_models import Animal, Enclosure, Zoo  # Certifique-se de importar as classes corretamente
 
 class TestZoo(unittest.TestCase):
     def test_feed_animal(self):
@@ -23,4 +24,3 @@ class TestZoo(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-# The test above is testing the classes and methods from zoo_models.py
