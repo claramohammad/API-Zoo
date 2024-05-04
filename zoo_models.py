@@ -1,14 +1,14 @@
 class Animal:
-    def __innit__(self, name, species):
+    def __init__(self, name, species):
         self.name = name
         self.species = species
-        self.hapiness = 0 #neutral
+        self.happiness = 0  # Neutral
     
     def feed(self, value):
-        self.hapiness += value
+        self.happiness += value
 
 class Enclosure:
-    def __innit__(self, species):
+    def __init__(self, species):
         self.species = species
         self.animals = []
         self.conservation_status = "Bem cuidado"
@@ -20,10 +20,10 @@ class Enclosure:
         if animal.species == self.species:
             self.animals.append(animal)
         else:
-            raise ValueError("Especie do animal não compativel com o recinto")
+            raise ValueError("Espécie do animal não compatível com o recinto")
         
 class Zoo:
-    def __innit__(self):
+    def __init__(self):
         self.enclosures = []
         self.money = 0
 
@@ -31,6 +31,6 @@ class Zoo:
         self.enclosures.append(enclosure)
 
     def visitors(self, visitors_number):
-        hapiness.rate = sum(animal.hapiness for enclosure in self.enclosures for animal in enclosure.animals)
+        happiness_rate = sum(animal.happiness for enclosure in self.enclosures for animal in enclosure.animals)
         conservation_rate = sum(1 for enclosure in self.enclosures if enclosure.conservation_status == "Bem cuidado")
-        self.money += visitors_number * (hapiness_rate + conservation_rate)
+        self.money += visitors_number * (happiness_rate + conservation_rate)
